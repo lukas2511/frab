@@ -531,7 +531,7 @@ class ImportExportHelper
   end
 
   def disable_callbacks
-    EventPerson.skip_callback(:save, :after, :update_speaker_count)
+    #EventPerson.skip_callback(:save, :after, :update_speaker_count)
     EventPerson.skip_callback(:save, :after, :update_event_conflicts)
     Availability.skip_callback(:save, :after, :update_event_conflicts)
     EventRating.skip_callback(:save, :after, :update_average)
@@ -539,7 +539,7 @@ class ImportExportHelper
   end
 
   def enable_callbacks
-    EventPerson.set_callback(:save, :after, :update_speaker_count)
+    #EventPerson.set_callback(:save, :after, :update_speaker_count)
     EventPerson.set_callback(:save, :after, :update_event_conflicts)
     Availability.set_callback(:save, :after, :update_event_conflicts)
     EventRating.set_callback(:save, :after, :update_average)
